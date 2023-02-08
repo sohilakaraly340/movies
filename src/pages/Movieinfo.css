@@ -1,0 +1,28 @@
+.movie__image{
+    width:100%;
+    height: 600px;
+    position: relative;
+    
+}
+.movie{
+    line-height: 1.7rem;
+    position: absolute;
+   color: white;
+    bottom: 34px;
+    left: 7.5vw;
+    
+}
+
+.movie__name{
+    font-weight: "900"; 
+    font-size : "1.5rem";
+}
+.movie__genre{
+    margin-left: 10px;
+    border: 1px solid white;
+    border-radius: 70%;
+    padding: 15px;
+    
+   
+
+}
