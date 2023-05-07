@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import { Box, Stack } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import { Productcontext } from "../../App"
 import { Link } from 'react-router-dom';
 import "./SlidShow.css"
@@ -23,22 +23,25 @@ export default function SlidShow() {
               </div>
 
               <div className='text-over-imge' >
-                <span style={{ fontWeight: "800", fontSize: "2vw" }}>{mov.original_title}</span>
 
-                <Stack direction="row" gap="20px" marginBottom="20px" alignItems="center">
-                  <span>{mov.release_date}</span>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                    {mov.vote_average}
-                    <StarPurple500SharpIcon />
-                  </div>
+                <Box sx={{ display: { xs: "none", lg: "block", md: "block" } }}>
+                  <span style={{ fontWeight: "800", fontSize: "2vw" ,display:"flex" ,justifyContent:"flex-start" }}>{mov.original_title}</span>
+                  
+                  <Stack direction="row" gap="20px" marginBottom="20px" alignItems="center">
+                    <span>{mov.release_date}</span>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      {mov.vote_average}
+                      <StarPurple500SharpIcon />
+                    </div>
 
 
-                </Stack>
+                  </Stack>
 
-                <Box width="50%" justifyContent="center" textAlign="start" >
-                 <span style={{fontSize:"1rem"}}> {mov.overview}</span>
+                  <Box width="50%" justifyContent="center" textAlign="start" >
+                    <Typography style={{ fontSize: "1rem" }}> {mov.overview}</Typography>
+                  </Box>
+
                 </Box>
-
               </div>
 
             </Link>

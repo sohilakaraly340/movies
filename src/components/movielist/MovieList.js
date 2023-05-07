@@ -26,15 +26,12 @@ export default function MovieList() {
 
   return (
     <Stack>
-      <Box sx={{ margin: "50px" }}>
-        <Typography variant="h3" component="h2" >{type.type ? type.type : "popular"}</Typography>
+      <Box sx={{ margin: "3vw" }}>
+        <Typography fontSize="3.5vw" fontWeight="200">{type.type ? type.type : "popular"}</Typography>
 
-        {/* {type.type==="popular" ?popmovie.map(mov =>  <MovCard key={mov.id} mov={mov}/> )
-        : type.type==="top-rated" ? top.map(mov =>  <MovCard key={mov.id} mov={mov}/>) 
-        :  upcome.map(mov =>  <MovCard key={mov.id} mov={mov}/>)} */}
-
-
+        <Box margin="0 auto" width="90%" >
         {listmov.map(mov =>  <MovCard key={mov.id} mov={mov}/>)}
+        </Box>
         
       
       </Box>
